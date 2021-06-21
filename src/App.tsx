@@ -32,6 +32,7 @@ const App = (): JSX.Element => {
     setContent('');
 
     addPost({ title, content });
+
     getPosts();
   };
 
@@ -52,7 +53,7 @@ const App = (): JSX.Element => {
       <h2 className="text-xl font-semibold">글 목록</h2>
       <div className="w-4/12">
         {posts?.map((post) => (
-          <div key={post.id}>
+          <div key={post.id} className="mb-4">
             <h3 className="text-xl font-medium mb-1">{post.title}</h3>
             <p className="overflow-hidden">{post.content}</p>
           </div>
@@ -63,6 +64,3 @@ const App = (): JSX.Element => {
 };
 
 export default App;
-function useSelector() {
-  throw new Error('Function not implemented.');
-}
